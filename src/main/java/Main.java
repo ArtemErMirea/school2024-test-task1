@@ -12,9 +12,7 @@ public class Main {
             File file = new File("format.json");
             ObjectMapper objectMapper = new ObjectMapper();
             List<Order> orderList = objectMapper.readValue(file, new TypeReference<List<Order>>() {});
-            for (Order order : orderList) {
-                System.out.println(order);
-            }
+            //for (Order order : orderList) { System.out.println(order); }
             System.out.println (
                     Reporter.reportBiggestMonth(orderList)
             );
